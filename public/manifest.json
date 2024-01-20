@@ -13,6 +13,13 @@
     "scripts": ["background.js"]
   },
 
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["/static/css/extension.css"]
+    }
+  ],
+
   "browser_action": {},
 
   "permissions": ["activeTab"]
