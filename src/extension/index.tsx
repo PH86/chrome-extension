@@ -12,4 +12,5 @@ export class Extension extends React.Component {
 const extensionRoot = document.createElement("div");
 extensionRoot.id = "extension";
 document.body.appendChild(extensionRoot);
-ReactDOM.render(<Extension />, extensionRoot);
+const shadowRoot = extensionRoot.attachShadow({ mode: "open" });
+ReactDOM.render(<Extension />, shadowRoot);
